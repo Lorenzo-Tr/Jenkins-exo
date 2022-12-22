@@ -26,11 +26,11 @@ $(BIN_PATH)%.o: $(SRC_PATH)%.c $(INC)
 	@printf "									   \\r"
 	@$(CC) $(FLAGS) -I$(INC_PATH) -o $@ -c $<
 
-test: test/main.c
-	@gcc -c test/main.c -o bin/test.o
-	@gcc -o test bin/test.o
-	@./test
-	@rm test
+itest: test/main.c
+	@$(CC) -c test/main.c -o bin/test.o
+	@$(CC) -o test.run bin/test.o
+	@./test.run
+	@rm test.run
 
 clean:
-	rm -rf *.o
+	rm -rf bin/*.o
