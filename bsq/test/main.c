@@ -9,7 +9,7 @@ int main(){
 	printf("Test add\n");
 	
 	int inputX=5;
-	int inputY=5;
+	int inputY=6;
 	int expectedValue=11;
 
 	assert(add(inputX,inputY)==expectedValue);
